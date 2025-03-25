@@ -1,0 +1,19 @@
+.left_menu {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 25%;
+}
+
+@media (orientation: portrait) {
+  .left_menu {
+    flex-direction: row;
+    padding: 5px;
+    width: 100%;
+    overflow: auto;
+    background-color: var(--text-color); /*#f2f2f2;*/
+  }
+}

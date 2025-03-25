@@ -1,0 +1,63 @@
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+
+.carousel_img_container {
+  display: flex;
+  justify-content: center;
+  min-width: 200px;
+  min-height: 100px;
+}
+
+.carousel_img_container img {
+  width: 100%;
+  height: auto;
+}
+
+.arrow {
+  height: auto;
+  cursor: pointer;
+}
+
+.unclickable {
+  cursor: default;
+}
+
+.mini_galery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50vw;
+}
+
+.mini_pic_wrapper {
+  max-width: 126px;
+  height: 75px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.mini_pic_wrapper img {
+  height: inherit;
+  object-fit: cover;
+}
+
+@media (orientation: portrait) {
+  .arrow {
+    display: none;
+  }
+
+  .mini_galery {
+    display: none;
+  }
+
+  .carousel {
+    padding: 5px;
+  }
+}

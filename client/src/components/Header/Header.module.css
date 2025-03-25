@@ -1,0 +1,119 @@
+.header {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  gap: 30px;
+  /* font-family: Lineyka; */
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--back-color);
+}
+
+.photo_container {
+  height: 15vh;
+  width: 15vh;
+  border-radius: 50%;
+}
+
+.photo {
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+  color: var(--text-color);
+}
+
+.info {
+  width: fit-content;
+  height: 15vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.realtor_info {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 30px;
+}
+
+.realtor_name {
+  font-size: 250%;
+  letter-spacing: 2px;
+  color: var(--text-color);
+}
+
+.realtor_phone {
+  /* font-family: Lineyka; */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 300%;
+}
+
+.realtor_phone a:link {
+  text-decoration: none;
+  color: var(--highlighted-color);
+}
+
+.buttons_bar {
+  display: flex;
+  justify-content: space-between;
+  gap: 20%;
+}
+
+.experience {
+  /* font-family: Lineyka; */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  color: var(--text-color);
+}
+
+@media (orientation: portrait) {
+  .header {
+    gap: 20px;
+    height: 13vh;
+    padding-top: 1vh;
+    padding-left: 8px;
+    padding-bottom: 1vh;
+    padding-right: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .info {
+    width: fit-content;
+    height: 12vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .realtor_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 3px;
+  }
+
+  .realtor_name {
+    font-size: 110% !important;
+  }
+
+  .realtor_phone {
+    font-size: 150% !important;
+  }
+
+  .photo_container {
+    box-sizing: border-box;
+    height: 12vh !important;
+    width: 12vh !important;
+  }
+
+  .experience {
+    font-size: 16px !important;
+    letter-spacing: 1px !important;
+  }
+}

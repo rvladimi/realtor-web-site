@@ -1,0 +1,28 @@
+.realty_choice {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 5px;
+  background-color: var(--text-color);
+  margin-bottom: 2px;
+}
+
+@media (orientation: portrait) {
+  .realty_choice {
+    display: none;
+  }
+}
+
+.realty_select {
+  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Lineyka; */
+  font-size: 24px;
+  letter-spacing: 3px;
+  padding: 6px 13px;
+  align-items: center;
+  border-radius: 6px;
+  color: var(--text-color);
+  background-color: var(--back-color);
+}

@@ -1,0 +1,169 @@
+.wrapper {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 25px;
+  padding-left: 20px;
+  overflow: hidden;
+  height: 0px;
+  transition: height 1s;
+  background-color: #e6e6e6;
+}
+
+label,
+.form_label {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #1b1735;
+}
+
+.wrapper input,
+textarea {
+  margin-left: 9px;
+}
+
+.wrapper button {
+  padding: 3px 5px;
+  border: 1px solid #2e2759;
+  border-radius: 3px;
+  background-color: white;
+  color: #2e2759;
+  cursor: pointer;
+}
+
+.sale_rent {
+  display: flex;
+  gap: 30px;
+}
+
+.notification {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 100;
+  line-height: 1.5;
+}
+
+.notification button {
+  margin-left: 5px;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.question {
+  height: 0px;
+  transition: 0.4s height;
+  overflow: hidden;
+}
+
+.address_fault {
+  margin-top: 10px;
+}
+
+.warning {
+  color: brown;
+}
+
+.error {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.description {
+  display: flex;
+  align-items: center;
+}
+
+.description_error {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.photo {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.photo_info {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #1b1735;
+}
+
+.input_group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.file {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.image_control {
+  display: flex;
+  align-items: center;
+  padding-top: 4px;
+}
+
+.image_container {
+  height: 75px;
+}
+
+.image_container img {
+  max-height: 100%;
+  width: auto;
+}
+
+.files_area {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.thumbnail {
+  height: 75px;
+}
+
+.thumbnail img {
+  max-height: 100%;
+  width: auto;
+}
+
+.form_buttons {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  gap: 30px;
+  padding-bottom: 5px;
+}
+
+.form_buttons button {
+  padding: 5px 6px;
+}
+
+.position_button {
+  display: inline;
+  margin: 5px 10px;
+  cursor: pointer;
+}
+
+.it {
+  font-style: italic;
+}
+
+.address_addition {
+  padding-top: 5px;
+  padding-bottom: 8px;
+  font-size: 14px;
+}
+
+.green_check {
+  font-size: 14px;
+}

@@ -1,0 +1,13 @@
+.pin_container {
+  box-sizing: border-box;
+  height: 40px;
+}
+
+.pin {
+  height: 100%;
+  width: 100%;
+}
+
+.custom_marker {
+  /* must exist even empty */
+}

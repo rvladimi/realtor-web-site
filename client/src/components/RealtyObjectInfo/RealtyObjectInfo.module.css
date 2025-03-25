@@ -1,0 +1,149 @@
+.wrapper {
+  font-family: Manrope;
+  min-height: 100vh;
+  background-color: var(--text-color);
+}
+
+.header {
+  /* font-family: Lineyka; */
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 1px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding-top: 20px;
+  padding-bottom: 25px;
+}
+
+.name {
+  font-size: 250%;
+  font-weight: 500;
+  color: #473d8a;
+}
+
+.price {
+  font-size: 250%;
+  font-weight: 500;
+  color: #000080;
+}
+
+.content {
+  max-width: 40vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
+}
+
+.item_header {
+  margin-top: 35px;
+  margin-bottom: 15px;
+  font-size: 180%;
+  font-weight: 500;
+  color: #473d8a; /* #4d4d4d;*/
+}
+
+.address {
+  font-size: 120%;
+  color: #5e5e5e;
+}
+
+.about {
+  font-size: 120%;
+  color: #5e5e5e;
+  margin-bottom: 20px;
+}
+
+.description {
+  padding-bottom: 50px;
+}
+
+.footer_wrapper {
+  margin-top: auto;
+  width: 100%;
+}
+
+.value {
+  font-size: 120%;
+  font-weight: 100;
+  color: black;
+}
+
+.meter {
+  font-size: 100%;
+  font-weight: 100;
+  color: black;
+}
+
+.power {
+  font-size: 70%;
+  font-weight: 100;
+  color: black;
+}
+
+.mobile_galery {
+  position: relative;
+  display: flex;
+  gap: 4vw;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-left: 3vw;
+  padding-right: 3vw;
+}
+
+.mobile_img_container {
+  min-width: 90vw;
+}
+
+.mobile_img_container img {
+  width: 100%;
+  height: auto;
+}
+
+.indicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 50vw;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5px;
+  padding-bottom: 13px;
+  gap: 3px;
+}
+
+.indicator_item {
+  width: 4px;
+  height: 4px;
+  background-color: #8c8c8c;
+}
+
+.indicator_item_highlighted {
+  width: 7px;
+  height: 7px;
+  background-color: var(--highlighted-color);
+}
+
+@media (orientation: portrait) {
+  .header {
+    flex-direction: column;
+    font-size: 60%;
+    gap: 10px;
+    padding-bottom: 20px;
+  }
+
+  .content {
+    max-width: 90vw;
+    margin-top: -10px;
+  }
+
+  .item_header {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 150%;
+    font-weight: 500;
+    color: #473d8a; /* #4d4d4d;*/
+  }
+}

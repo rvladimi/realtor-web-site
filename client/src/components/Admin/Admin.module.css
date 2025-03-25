@@ -1,0 +1,120 @@
+/*** AdminPage component classes ****/
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #fffae6;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.inner_wrapper {
+  width: 90%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 20px;
+}
+
+.main_page_button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.header {
+  letter-spacing: 3px;
+  color: #2e2759;
+  text-align: center;
+}
+
+.list_header {
+  font-size: 30px;
+  padding-top: 30px;
+}
+
+.list {
+  width: 100%;
+}
+
+.add_ad {
+  width: 100%;
+  margin-top: 30px;
+  background-color: white;
+}
+
+.add_header {
+  width: 100%;
+  font-size: 28px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  background-color: #e6e6e6;
+}
+
+.select_container {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  background-color: #e6e6e6;
+  padding-top: 5px;
+}
+
+.realty_select {
+  font-size: 22px;
+  letter-spacing: 3px;
+  box-sizing: border-box;
+  padding: 3px 10px;
+  border: 2px solid #473d8a;
+  border-radius: 6px;
+  color: #473d8a;
+  background-color: white;
+}
+
+/*** ListItem component classes ****/
+
+.normal {
+  display: block;
+}
+
+.deleted {
+  display: none;
+}
+
+.list_item_info {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  padding: 8px 10px;
+  margin-top: 30px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: #242046;
+  background-color: #e6e6e6;
+}
+
+.list_info_area {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 30px;
+}
+
+.list_buttons_area {
+  display: flex;
+  justify-content: space-between;
+  gap: 35px;
+}
+
+.list_buttons_area button {
+  height: fit-content;
+  padding: 5px 6px;
+  border: 1px solid #2e2759;
+  border-radius: 3px;
+  background-color: white;
+  color: #2e2759;
+  cursor: pointer;
+}

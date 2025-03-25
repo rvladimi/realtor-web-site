@@ -1,0 +1,45 @@
+.map_scroll {
+  position: relative;
+  box-sizing: border-box;
+  width: 75%;
+  background-color: var(--text-color);
+  z-index: 10;
+}
+
+.custom_map_container {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+@media (orientation: portrait) {
+  .map_scroll {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    height: 65vh;
+  }
+
+  .custom_map_container {
+    width: 100%;
+    height: 65vh;
+    background-color: var(--text-color);
+  }
+}
+
+.custom_marker_cluster {
+  background: #ffffff;
+  border: 15px solid #372f6a;
+  border-radius: 50%;
+  color: #000000;
+  height: 33px;
+  line-height: 37px;
+  text-align: center;
+  width: 33px;
+}
+
+/* my-pin seems to be used nowhere, but the map is not shown correctly without it */
+.my-pin {
+  height: 40px;
+}

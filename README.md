@@ -1,0 +1,1 @@
+It's a MERN stack project -- MongoDB, Express.js, React, Node.js, Typescript also. The real SPA https://realtor-dubna.ru/ is running on the code. This realtor web site has an OSM map on the home page and equipped with an admin page

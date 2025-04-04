@@ -171,8 +171,7 @@ function MobileSlider({ pics }: MobileSliderProps) {
                 className={classes.mobile_img_container}
               >
                 <img
-                  // src={`http://localhost:5050/${props.data[index]}`}
-                  src={`../../images/${pics[index]}`}
+                  src={`https://mysite.com/static/${item}`}
                   alt="realty pic"
                 />
               </div>

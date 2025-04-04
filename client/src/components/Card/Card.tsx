@@ -37,8 +37,10 @@ export function Card({
       }}
     >
       <div className={classes.image_wrapper}>
-        {/* <img src={`http://localhost:5050/${imageSrc}`} alt="realty object" /> */}
-        <img src={`images/${imageSrc}`} alt="realty object" />
+        <img
+          src={`https://mysite.com/static/${imageSrc}`}
+          alt="realty object"
+        />
       </div>
       <div className={classes.description}>{description}</div>
     </div>

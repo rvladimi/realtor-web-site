@@ -14,7 +14,7 @@ export const Password = (props: Props) => {
 
     const pwd = { password: value };
     try {
-      const result = await fetch(`http://localhost:5050/record/password`, {
+      const result = await fetch(`https://mysite.com/password`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json;charset=utf-8",

@@ -1,9 +1,9 @@
 import express, { Request, Response } from "express";
 import multer from "multer";
-import bcrypt from "bcrypt";
 import fs from "fs";
-import db from "../db/connection.js";
+// converting the id from string to ObjectId for the _id.
 import { ObjectId } from "mongodb";
+import db from "../db/connection.js";
 
 const upload = multer({ dest: "uploads/" });
 const router = express.Router();
@@ -15,43 +15,10 @@ router.get("/", async (req, res) => {
   res.send(results).status(200);
 });
 
-// getting a single record by id (doesn't use for now)
-router.get("/:id", async (req, res) => {
-  let collection = await db.collection("records");
-  let query = { _id: new ObjectId(req.params.id) };
-  let result = await collection.findOne(query);
-
-  if (!result) res.send("Not found").status(404);
-  else res.send(result).status(200);
-});
-
-// checking password
-router.post("/password", async (req: Request, res: Response) => {
-  try {
-    const enteredPassword = req.body.password;
-    const collection = await db.collection("password");
-    const result = await collection.find({}).toArray();
-    const hash = result[0].passwd;
-
-    bcrypt.compare(enteredPassword, hash, function (error, isMatch) {
-      if (error) {
-        throw error;
-      } else if (!isMatch) {
-        res.status(250).send("password doesn't match");
-      } else {
-        res.status(200).send("password ok");
-      }
-    });
-  } catch (err) {
-    console.error(err);
-    res.status(500).send("password error");
-  }
-});
-
 // creating a new record or changing an existing one
 router.post("/", upload.array("files"), async (req: Request, res: Response) => {
   try {
-    // these types is the same as for the client components, but client
+    // These types is the same as for the client components, but client
     // is outside of the 'rootDir' which is expected to contain all source files.
     // Probably it's possible to fix it (via the bundler configurations?)
     // But here the types are just duplicated

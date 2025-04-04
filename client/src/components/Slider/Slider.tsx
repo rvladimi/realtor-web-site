@@ -36,8 +36,7 @@ export function Slider({ pics }: SliderProps) {
           onClick={() => setIsClicked(!isClicked)}
         >
           <img
-            // src={`http://localhost:5050/${props.data[index]}`}
-            src={`../../images/${pics[index]}`}
+            src={`https://mysite.com/static/${pics[index]}`}
             onLoad={imageSize}
             alt="realty pic"
           />
@@ -157,8 +156,7 @@ function MiniGalery(props: MiniGaleryProps) {
               }}
             >
               <img
-                // src={`http://localhost:5050/${item}`}
-                src={`../../images/${item}`}
+                src={`https://mysite.com/static/${item}`}
                 alt="realty mini pic"
               />
             </div>

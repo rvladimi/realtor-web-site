@@ -344,6 +344,8 @@ export const Form = ({ objectData, showFormFunc }: Props) => {
     }
   };
 
+  let newDataPromise: Promise<RealtyObject[] | string>;
+
   async function formSubmit(event: React.FormEvent) {
     event.preventDefault();
     // On clicking the "save" button the form area starts to diminish at first
@@ -352,7 +354,7 @@ export const Form = ({ objectData, showFormFunc }: Props) => {
     if (formWrapper) formWrapper.style.height = "0px";
     // Simultaneously the new or changed ad is sent to the server
     const sendingResult = await sendData();
-    let newDataPromise: Promise<RealtyObject[] | string>;
+
     if (sendingResult === "ok") {
       // Getting the data back from the server in order to update "data" in the DataContext.
       // Id of a new ad is unknown, so one has to get all the data from server
@@ -413,7 +415,7 @@ export const Form = ({ objectData, showFormFunc }: Props) => {
       }
 
       try {
-        const result = await fetch(`http://localhost:5050/record/`, {
+        const result = await fetch(`https://mysite.com/record/`, {
           method: "POST",
           body: formData,
         });
@@ -429,7 +431,7 @@ export const Form = ({ objectData, showFormFunc }: Props) => {
 
     async function getNewData(): Promise<RealtyObject[] | string> {
       try {
-        const response = await fetch("http://localhost:5050/record");
+        const response = await fetch("https://mysite.com/record");
         if (response.ok) {
           const arr = await response.json();
           arr.forEach((item: any) => {
@@ -463,7 +465,6 @@ export const Form = ({ objectData, showFormFunc }: Props) => {
       const pictures: FileWithSrc[] = [...e.target.files];
       for (const item of pictures) {
         if (item.type.startsWith("image/")) {
-          console.log(item.type);
           item.src = URL.createObjectURL(item);
         } else {
           alert("All the chosen files must be images!");
@@ -796,7 +797,7 @@ export const Form = ({ objectData, showFormFunc }: Props) => {
             objectData.images.map((item, index) => (
               <div className={classes.image_control} key={index}>
                 <div className={classes.image_container}>
-                  <img src={`http://localhost:5050/${item}`} />
+                  <img src={`https://mysite.com/static/${item}`} />
                 </div>
                 <input data-src={item} type="checkbox" />
                 <span className={classes.photo_info}>удалить</span>

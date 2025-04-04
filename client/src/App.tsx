@@ -9,7 +9,6 @@ import {
   DataContext,
   RealtyObject,
   MobileContext,
-  raw,
 } from "./components/common.tsx";
 //import "./App.css";
 
@@ -18,30 +17,25 @@ export function App() {
   const [mobile, setMobile] = useState(false);
   const [passwdCheck, setPasswdCheck] = useState(false);
 
-  // The code below is commented for this web-site to work without a server side.
-  // The data ("raw") are taken from the file commom.tsx instead.
-  // But the admin page requires a server side
   useEffect(() => {
-    // (async () => {
-    //   try {
-    //     const response = await fetch("http://localhost:5050/record");
+    (async () => {
+      try {
+        const response = await fetch("https://mysite.com/record");
 
-    //     if (response.ok) {
-    //       const arr = await response.json();
-    //       arr.forEach((item: any) => {
-    //         item.id = item._id;
-    //         delete item._id;
-    //       });
-    //       setData(arr);
-    //     } else {
-    //       throw new Error(`HTTP error! status: ${response.status}`);
-    //     }
-    //   } catch (error) {
-    //     console.error("A problem occurred with your fetch operation: ", error);
-    //   }
-    // })();
-
-    setData(raw);
+        if (response.ok) {
+          const arr = await response.json();
+          arr.forEach((item: any) => {
+            item.id = item._id;
+            delete item._id;
+          });
+          setData(arr);
+        } else {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+      } catch (error) {
+        console.error("A problem occurred with your fetch operation: ", error);
+      }
+    })();
 
     const checkMobile = () => {
       if (window.matchMedia("(orientation: portrait)").matches) {

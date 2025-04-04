@@ -1,5 +1,5 @@
-import { useEffect, Dispatch, SetStateAction } from "react";
-import { GeoSearchControl, OpenStreetMapProvider } from "leaflet-geosearch";
+import { Dispatch, SetStateAction } from "react";
+//import { GeoSearchControl, OpenStreetMapProvider } from "leaflet-geosearch";
 import { MapContainer, TileLayer, useMap } from "react-leaflet";
 import L, { MarkerCluster } from "leaflet";
 import MarkerClusterGroup from "react-leaflet-cluster";
@@ -9,19 +9,19 @@ import "leaflet/dist/leaflet.css";
 import "leaflet-geosearch/assets/css/leaflet.css";
 import classes from "./Map.module.css";
 
-const SearchField = () => {
-  const provider = new OpenStreetMapProvider();
-  // @ts-expect-error (official example has the same)
-  const searchControl = new GeoSearchControl({
-    provider: provider,
-  });
-  const map = useMap();
-  useEffect(() => {
-    map.addControl(searchControl);
-    return () => map.removeControl(searchControl);
-  }, []);
-  return null;
-};
+// const SearchField = () => {
+//   const provider = new OpenStreetMapProvider();
+//   // @ts-expect-error (official example has the same)
+//   const searchControl = new GeoSearchControl({
+//     provider: provider,
+//   });
+//   const map = useMap();
+//   useEffect(() => {
+//     map.addControl(searchControl);
+//     return () => map.removeControl(searchControl);
+//   }, []);
+//   return null;
+// };
 
 function FitMapBounds(props: { bounds: L.LatLngBoundsExpression }) {
   const map = useMap();
@@ -60,7 +60,7 @@ export function Map({
         scrollWheelZoom={true}
         attributionControl={false}
       >
-        <SearchField />
+        {/* <SearchField /> */}
         <TileLayer
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

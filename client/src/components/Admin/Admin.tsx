@@ -20,10 +20,9 @@ function ListItem({ item }: { item: RealtyObject }) {
     const deletionConfirmed = confirm("Подтвердите удаление");
     if (deletionConfirmed) {
       try {
-        const response = await fetch(
-          `http://localhost:5050/record/${item.id}`,
-          { method: "DELETE" }
-        );
+        const response = await fetch(`https://mysite.com/record/${item.id}`, {
+          method: "DELETE",
+        });
 
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);

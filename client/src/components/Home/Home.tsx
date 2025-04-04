@@ -188,12 +188,8 @@ const reducer = (state: State, action: Action): State => {
         availableObjects: payload?.availableObjects
           ? payload?.availableObjects
           : state.availableObjects,
-        buyButtonHighlighted: payload?.buyButtonHighlighted
-          ? payload?.buyButtonHighlighted
-          : state.buyButtonHighlighted,
-        rentButtonHighlighted: payload?.rentButtonHighlighted
-          ? payload?.rentButtonHighlighted
-          : state.rentButtonHighlighted,
+        buyButtonHighlighted: payload?.buyButtonHighlighted,
+        rentButtonHighlighted: payload?.rentButtonHighlighted,
         show: payload?.show ? payload?.show : state.show,
         bounds: payload?.bounds ? payload?.bounds : state.bounds,
       };
